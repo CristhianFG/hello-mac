@@ -1,4 +1,4 @@
-//@Library('jenkins-pipeline-shared-libs') _
+@Library('jenkins-pipeline-shared-libs')_
 
 def hamburguesa($var) {
   echo 'HAMBURGUESA ' + $var
@@ -18,6 +18,12 @@ pipeline {
   
   stages {
   
+    stage('Saludo') {
+      steps {
+        sayHello 'Persona'
+      }
+    }
+    
     stage('Hamburguesa') {
       steps {
         hamburguesa("${params.HAMBURGUESA}")
