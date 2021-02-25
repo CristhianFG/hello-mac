@@ -1,11 +1,11 @@
 @Library('jenkins-pipeline-shared-libs')_
 
 def hamburguesa($var) {
-  echo 'HAMBURGUESA ' + $var
+  echo 'HAMBURGUESA: ' + $var
 }
 
 def patatas($var) {
-  echo 'PATATAS ' + $var
+  echo 'PATATAS: ' + $var
 }
 
 pipeline {
