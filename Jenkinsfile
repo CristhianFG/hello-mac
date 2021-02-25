@@ -1,4 +1,4 @@
-@Library('jenkins-pipeline-shared-libs') _
+//@Library('jenkins-pipeline-shared-libs') _
 
 def hamburguesa($var) {
   echo 'HAMBURGUESA ' + $var
