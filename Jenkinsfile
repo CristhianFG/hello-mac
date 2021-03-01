@@ -18,7 +18,7 @@ pipeline {
   
   stages {
     
-    node('Slave') {
+    node('principal') {
   
       stage('Saludo') {
         steps {
