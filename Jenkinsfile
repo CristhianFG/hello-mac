@@ -17,24 +17,26 @@ pipeline {
   }
   
   stages {
-  
-    stage('Saludo') {
-      steps {
-        sayHello 'Persona'
-      }
-    }
     
-    stage('Hamburguesa') {
-      steps {
-        hamburguesa("${params.HAMBURGUESA}")
-      }
-    }
-    
-    stage('Patatas') {
-      steps {
-        patatas("${params.PATATAS}")
-      }
-    }
+    node('Slave') {
   
+      stage('Saludo') {
+        steps {
+          sayHello 'Persona'
+        }
+      }
+    
+      stage('Hamburguesa') {
+        steps {
+          hamburguesa("${params.HAMBURGUESA}")
+        }
+      }
+    
+      stage('Patatas') {
+        steps {
+          patatas("${params.PATATAS}")
+        }
+      }
+    }
   }
 }
