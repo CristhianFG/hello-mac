@@ -9,7 +9,7 @@ def patatas($var) {
 }
 
 pipeline {
-  agent {label 'slave'}
+  agent any //{label 'slave'}
   
   parameters {
       choice(name: 'HAMBURGUESA', choices: ['CHEESEBURGER', 'CHICKEN SUPREME'], description: 'Escoja su hamburguesa.')
