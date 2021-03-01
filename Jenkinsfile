@@ -17,25 +17,22 @@ pipeline {
   }
   
   stages {
-    
-    node('principal') {
   
-      stage('Saludo') {
-        steps {
-          sayHello 'Persona'
-        }
+    stage('Saludo') {
+      steps {
+        sayHello 'Persona'
       }
+    }
     
-      stage('Hamburguesa') {
-        steps {
-          hamburguesa("${params.HAMBURGUESA}")
-        }
+    stage('Hamburguesa') {
+      steps {
+        hamburguesa("${params.HAMBURGUESA}")
       }
+    }
     
-      stage('Patatas') {
-        steps {
-          patatas("${params.PATATAS}")
-        }
+    stage('Patatas') {
+      steps {
+        patatas("${params.PATATAS}")
       }
     }
   }
