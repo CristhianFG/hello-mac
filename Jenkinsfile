@@ -16,9 +16,9 @@ pipeline {
       choice(name: 'PATATAS', choices: ['FRITAS', 'DELUXE'], description: 'Escoja sus patatas.')
   }
   
-  node('principal') {
+  stages {
     
-    stages {
+    node('principal') {
   
       stage('Saludo') {
         steps {
