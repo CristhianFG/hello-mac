@@ -17,6 +17,12 @@ pipeline {
   }
   
   stages {
+    
+    stage('Build'){
+      steps{
+        sh 'ant build'
+      }
+    }
   
     stage('Saludo') {
       steps {
